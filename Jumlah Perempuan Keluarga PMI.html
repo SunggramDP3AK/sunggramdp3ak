@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perempuan Keluarga PMI</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <style>
+    /* Your CSS styles here */
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #eee;
+}
+.btn{
+  position: absolute;
+    top: 10px;
+    left: 45px;
+    height: 37px;
+    width: 37px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+.btn.click{
+  left: 260px;
+}
+.btn span{
+    color: white;
+    font-size: 15px;
+    line-height: 36px;
+}
+.btn.click span:before{
+  content: '\f00d';
+}
+.sidebar{
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: #1b1b1b;
+  transition: left 0.4s ease;
+}
+.sidebar.show{
+  left: 0px;
+}
+.sidebar .text{
+  color: white;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #1e1e1e;
+  letter-spacing: 1px;
+}
+nav ul{
+  background: #1b1b1b;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+      padding-left: 10px;
+}
+nav ul li{
+  line-height: 50px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+nav ul li:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+nav ul li a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  padding-left: 14px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+nav ul li.active a{
+  color: #FC5404;
+    background: #1e1e1e;
+    border-left-color: #FC5404;
+}
+nav ul li a:hover{
+  background: #1e1e1e;
+}
+
+.feat-show{
+  transition: all 0.5s;
+}
+
+nav ul li.active ul{
+ transition: all 0.5s;
+}
+nav ul ul{
+  position: static;
+  display: none; 
+}
+
+nav ul.show{
+  display: block;
+  transition: all 0.5s;
+}
+
+nav ul ul li{
+  line-height: 42px;
+  border-top: none;
+}
+nav ul ul li a{
+  font-size: 12px;
+  color: #e6e6e6;
+  
+}
+nav ul li.active ul li a{
+  color: #e6e6e6;
+  background: #1b1b1b;
+  border-left-color: transparent;
+}
+
+a:hover{
+  color: #FC5404 !important;
+}
+nav ul ul li a:hover{
+  color: #FC5404 !important;
+  background: #1e1e1e!important;
+}
+nav ul li a span{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  transition: transform 0.4s;
+}
+nav ul li a span.rotate{
+  transform: translateY(-50%) rotate(-180deg);
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #202020;
+  z-index: -1;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <div class="btn">
+    <span class="fas fa-bars"></span>
+  </div>
+  <nav class="sidebar">
+    <div class="text">DP3AK</div>
+    <ul class="main_side">
+      <li class="active"><a href="beranda.html" class="beranda">Beranda</a></li>
+      <li>
+        <a href="#" id="1">Bidang PPKG
+          <span class="fas fa-caret-down"></span>
+        </a>
+        <ul class="item-show-1">
+          <li><a href="IPG.html" class="ipg">IPG</a></li>
+          <li><a href="IDG.html"class="idg">IDG</a></li>
+          <li><a href="IKG.html"class="ikg">IKG</a></li>
+      </ul>
+      </li>
+      <li>
+        <a href="#" id="2">Bidang PPKK
+          <span class="fas fa-caret-down"></span>
+        </a>
+        <ul class="item-show-2">
+          <li><a href="Jumlah Perempuan Kepala Keluarga.html"class="jumlah perempuan kepala keluarga">Jumlah Perempuan Kepala Keluarga</a></li>
+          <li><a href="Jumlah Perempuan Korban Kekerasan (SIMPONI).html"class="jumlah perempuan korban kekerasan (SIMPONI)">Jumlah Perempuan Korban Kekerasan (SIMPONI)</a></li>
+          <li><a href="Jumlah Perempuan Industri Rumahan.html"class="jumlah perempuan industri rumahan">Jumlah Perempuan Industri Rumahan</a></li>
+          <li><a href="Jumlah Perempuan Keluarga PMI.html"class="jumlah perempuan keluaga pmi">Jumlah Perempuan Keluarga PMI</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" id="3">Bidang PPHA
+          <span class="fas fa-caret-down"></span>
+        </a>
+        <ul class="item-show-3">
+          <li><a href="IPA.html"class="ipa">IPA</a></li>
+          <li><a href="KTA.html"class="kta">KTA</a></li>
+      </ul>
+      </li>
+      <li> 
+        <a href="#" id="4">Bidang PPKB
+          <span class="fas fa-caret-down"></span>
+        </a>
+        <ul class="item-show-4">
+          <li><a href="Unmet Need.html"class="unmet need">Unmet Need</a></li>
+          <li><a href="CPR.html"class="cpr">CPR</a></li>
+          <li><a href="TFR.html"class="tfr">TFR</a></li>
+          <li><a href="ASFR.html"class="asfr">ASFR</a></li>
+      </ul>
+      </li>
+      <li> 
+        <a href="#" id="5">Bidang Dukcapil
+          <span class="fas fa-caret-down"></span>
+        </a>
+        <ul class="item-show-5">
+          <li><a href="Jumlah Penduduk Perempuan.html"class="jumlah penduduk perempuan">Jumlah Penduduk Perempuan</a></li>
+          <li><a href="Jumlah Penduduk Laki-laki.html"class="jumlah penduduk laki-laki">Jumlah Penduduk Laki-laki</a></li>
+          <li><a href="Jumlah Penduduk Menurut Agama.html"class="jumlah penduduk menurut agama">Jumlah Penduduk Menurut Agama</a></li>
+          <li><a href="Jumlah Penduduk Menurut Pendidikan.html"class="jumlah penduduk menurut pendidikan">Jumlah Penduduk Menurut Pendidikan</a></li>
+          <li><a href="Jumlah Penduduk Menurut Struktur Umur.html"class="jumlah penduduk menurut struktur umur">Jumlah Penduduk Menurut Struktur Umur</a></li>
+      </ul>
+      </li>
+      <li>   
+        <a href="#" id="6">UPT
+          <span class="fas fa-caret-down"></span>
+        </a>
+        <ul class="item-show-6">
+          <li><a href="Jumlah Pengaduan.html"class="jumlah pengaduan">Jumlah Pengaduan</a></li>
+          <li><a href="Jumlah Pengaduan Ranah UPT.html"class="jumlah pengaduan ranah upt">Jumlah Pengaduan Ranah UPT</a></li>
+          <li><a href="Jumlah Pengaduan Bukan Ranah UPT.html"class="jumlah pengaduan bukan ranah upt">Jumlah Pengaduan Bkn Ranah UPT</a></li>
+          <li><a href="Jumlah Kasus Kekerasan Perempuan.html"class="jumlah kasus kekerasan perempuan">Jumlah Kasus Kekerasan Prmpn</a></li>
+          <li><a href="Jumlah Kasus Kekerasan Anak.html"class="jumlah kasus kekerasan anak">Jumlah Kasus Kekerasan Anak</a></li>
+      </ul>
+      </li>
+      <li>    
+    </ul>
+  </nav>
+  <div class="content">
+    <div class="header"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+   $('.btn').click(function(){
+           $(this).toggleClass("click");
+           $('.sidebar').toggleClass("show");
+         });
+          
+
+           $('.sidebar ul li a').click(function(){
+                var id = $(this).attr('id');
+                $('nav ul li ul.item-show-'+id).toggleClass("show");
+                $('nav ul li #'+id+' span').toggleClass("rotate");
+                
+           });
+           
+           $('nav ul li').click(function(){
+             $(this).addClass("active").siblings().removeClass("active");
+           });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kab/Kota Data Viewer</title>
+<!-- Add Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+<!-- Add Google Charts API -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+  /* CSS untuk menata tampilan tabel, tombol, dll. */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  tr:hover {
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  .buttons, .upload-btn-container, .download-btn-container {
+    margin-bottom: 20px;
+  }
+  .buttons button, .upload-btn, .download-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .buttons button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .download-btn-container {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .upload-btn-container {
+    margin-top: 20px;
+  }
+
+  #curve_chart {
+    margin-top: -20px; /* Atur margin atas */
+  }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Konfigurasi Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCT2xu39-AfZKv1KDI3isG5xDZkm9kZoPw",
+    authDomain: "projectdp3ak.firebaseapp.com",
+    projectId: "projectdp3ak",
+    storageBucket: "projectdp3ak.appspot.com",
+    messagingSenderId: "602000338998",
+    appId: "1:602000338998:web:f33f8953b3690c67efa897"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  const storage = firebase.storage();
+  let csvData = [];
+  let currentFileName = '';
+
+  // Fungsi untuk mengambil dan menampilkan data CSV berdasarkan tahun tertentu
+  function fetchAndDisplayCSV(year) {
+    const fileName = `Perempuan Keluarga PMI${year}.csv`;
+    currentFileName = fileName;
+    const storageRef = storage.ref(fileName);
+
+    storageRef.getDownloadURL().then(function(url) {
+      fetch(url)
+      .then(response => response.text())
+      .then(data => {
+        csvData = parseCSVData(data);
+        displayCSVData(csvData, 'csvData');
+        drawChart(csvData, 'curve_chart');
+      })
+      .catch(function(error) {
+        console.error(error);
+        clearCSVData();
+      });
+    }).catch(function(error) {
+      console.error(error);
+      clearCSVData();
+    });
+  }
+
+  // Fungsi untuk mengonversi data CSV menjadi array
+  function parseCSVData(data) {
+    const rows = data.split('\n').map(row => row.split(','));
+    return rows;
+  }
+
+  // Fungsi untuk menampilkan tombol-tombol tahun
+  function displayYearButtons() {
+    const years = ['2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030'];
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.className = 'buttons';
+
+    years.forEach(year => {
+      const button = document.createElement('button');
+      button.textContent = year;
+      button.addEventListener('click', () => {
+        fetchAndDisplayCSV(year);
+        setActiveButton(button);
+      });
+      buttonsDiv.appendChild(button);
+    });
+
+    document.getElementById('csvData').before(buttonsDiv);
+
+    // Membuat container untuk tombol unggah
+    const uploadButtonContainer = document.createElement('div');
+    uploadButtonContainer.className = 'upload-btn-container';
+
+    // Menambahkan peringatan di atas tempat unggah
+    const warningText = document.createElement('p');
+    warningText.textContent = "Pastikan bahwa nama file csv Perempuan Keluarga PMI(tahun). Contoh: Perempuan Keluarga PMI2020";
+    uploadButtonContainer.appendChild(warningText);
+
+    // Membuat tombol unggah
+    const uploadButton = document.createElement('input');
+    uploadButton.type = 'file';
+    uploadButton.id = 'upload-btn';
+    uploadButton.className = 'upload-btn';
+    uploadButton.addEventListener('change', handleFileUpload);
+    uploadButtonContainer.appendChild(uploadButton);
+
+    buttonsDiv.after(uploadButtonContainer);
+  }
+
+  // Fungsi untuk mengatur tombol yang aktif
+  function setActiveButton(activeButton) {
+    const buttons = document.querySelectorAll('.buttons button');
+    buttons.forEach(button => {
+      button.classList.remove('active');
+    });
+    activeButton.classList.add('active');
+  }
+
+  // Fungsi untuk menampilkan data CSV dalam tabel
+  function displayCSVData(data, containerId) {
+    const tableContainer = document.getElementById(containerId);
+    tableContainer.innerHTML = ''; // Hapus tabel sebelumnya
+
+    // Membuat container untuk tombol unduh
+    const downloadButtonContainer = document.createElement('div');
+    downloadButtonContainer.className = 'download-btn-container';
+
+    // Membuat tombol unduh
+    const downloadButton = document.createElement('button');
+    downloadButton.id = 'download-btn';
+    downloadButton.className = 'download-btn';
+    downloadButton.textContent = 'Download CSV';
+    downloadButton.addEventListener('click', () => downloadCSV(data));
+    downloadButtonContainer.appendChild(downloadButton);
+
+    tableContainer.appendChild(downloadButtonContainer);
+
+    const table = document.createElement('table');
+    data.forEach((rowData, index) => {
+      const row = document.createElement('tr');
+      rowData.forEach(cellData => {
+        const cell = document.createElement(index === 0 ? 'th' : 'td');
+        cell.textContent = cellData;
+        row.appendChild(cell);
+      });
+      table.appendChild(row);
+    });
+
+    tableContainer.appendChild(table);
+  }
+
+  // Fungsi untuk membersihkan data CSV dari tampilan
+  function clearCSVData() {
+    const tableContainer = document.getElementById('csvData');
+    tableContainer.innerHTML = ''; // Hapus tabel sebelumnya
+
+    const chartContainer = document.getElementById('curve_chart');
+    chartContainer.innerHTML = ''; // Hapus grafik sebelumnya
+  }
+
+  // Fungsi untuk menangani unggahan file
+  function handleFileUpload(event) {
+  const file = event.target.files[0];
+  const storageRef = storage.ref(file.name);
+  storageRef.put(file).then(snapshot => {
+    alert('File uploaded successfully');
+    // Ambil tahun dari nama file yang diunggah
+    const year = file.name.match(/\d{4}/)[0];
+    // Perbarui tahun yang ditampilkan
+    fetchAndDisplayCSV(year);
+  }).catch(error => {
+    console.error('Error uploading file:', error);
+  });
+}
+  // Fungsi untuk mengunduh data CSV
+  function downloadCSV(data) {
+    const csvContent = data.map(e => e.join(",")).join("\n");
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', currentFileName);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  // Fungsi untuk menggambar grafik
+  function drawChart(data, containerId) {
+    const chartData = [['Kab/Kota', 'Perempuan Keluarga PMI']];
+
+    for (let i = 1; i < data.length; i++) {
+      const row = data[i];
+      if (row.length >= 3) {
+        chartData.push([row[1], parseFloat(row[2])]);
+      }
+    }
+
+    const googleData = google.visualization.arrayToDataTable(chartData);
+
+    const options = {
+      title: 'Jumlah Perempuan Keluarga PMI per Kab/Kota',
+      hAxis: { title: 'Kab/Kota', slantedText: true, slantedTextAngle: 45 },
+      vAxis: { title: 'Perempuan Keluarga PMI' },
+      legend: { position: 'bottom' },
+    };
+
+    const chart = new google.visualization.BarChart(document.getElementById(containerId));
+    chart.draw(googleData, options);
+  }
+
+  // Muat Google Charts
+  google.charts.load('current', { packages: ['corechart'] });
+
+  // Tampilkan tombol-tombol untuk tahun yang tersedia
+  displayYearButtons();
+});
+</script>
+</head>
+<body>
+
+<!-- Bilah pencarian -->
+<div class="search-bar">
+  <input type="search" id="search-input" placeholder="Cari...">
+  <button id="search-btn">Cari</button>
+</div>
+
+<h1>Data CSV</h1>
+<div id="uploadedData"></div>
+<div id="csvData"></div>
+
+<h2>Visualisasi Data</h2>
+  <div id="curve_chart" style="width: 100%; height: 1200px"></div>
+</div>
+
+</body>
+</html>
