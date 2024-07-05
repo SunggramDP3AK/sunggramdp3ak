@@ -1,0 +1,21 @@
+[debug] [2024-07-05T01:58:45.723Z] ----------------------------------------------------------------------
+[debug] [2024-07-05T01:58:45.727Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LENOVO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-07-05T01:58:45.728Z] CLI Version:   13.13.0
+[debug] [2024-07-05T01:58:45.728Z] Platform:      win32
+[debug] [2024-07-05T01:58:45.728Z] Node Version:  v18.17.1
+[debug] [2024-07-05T01:58:45.729Z] Time:          Fri Jul 05 2024 08:58:45 GMT+0700 (Western Indonesia Time)
+[debug] [2024-07-05T01:58:45.730Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-05T01:58:45.744Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-05T01:58:45.745Z] > authorizing via signed-in user (sunggramdpak@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\LENOVO\Documents\sunggramdp3ak\sunggramdp3ak
+
